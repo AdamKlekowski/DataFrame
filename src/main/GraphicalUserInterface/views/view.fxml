@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.GraphicalUserInterface.controllers.MainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Load">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#loadFile" text="from file" />
+                <MenuItem mnemonicParsing="false" onAction="#loadDb" text="from database" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="Group">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#groupBy" text="group and save" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Plot">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#test" text="performance test" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Save">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="to file" />
+                  <MenuItem mnemonicParsing="false" text="to database" />
+               </items>
+            </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="433.0" prefWidth="684.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TableView fx:id="table" layoutX="49.0" layoutY="41.0" prefHeight="371.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
